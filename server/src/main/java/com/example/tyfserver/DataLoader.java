@@ -25,8 +25,8 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Member roki = memberRepository
             .save(new Member("Rok93@naver.com", "로키", "rokiMountain", Oauth2Type.NAVER));
-        Member soori = memberRepository
-            .save(new Member("DWL5@kakao.com", "수리", "soorisooriMahaSoori", Oauth2Type.KAKAO));
+        Member suri = memberRepository
+            .save(new Member("DWL5@kakao.com", "수리", "surisuriMahasuri", Oauth2Type.KAKAO));
         Member bePoz = memberRepository
             .save(new Member("Be-poz@google.com", "파즈", "allIsBePozzible", Oauth2Type.GOOGLE));
         Member joy = memberRepository
@@ -37,7 +37,7 @@ public class DataLoader implements CommandLineRunner {
             .save(new Member("hchayan@google.com", "인치", "1inch", Oauth2Type.GOOGLE));
 
         bannerRepository.save(new Banner(roki, "roki-image.png"));
-        bannerRepository.save(new Banner(soori, "soori-image.png"));
+        bannerRepository.save(new Banner(suri, "suri-image.png"));
         bannerRepository.save(new Banner(joy, "joy-image.png"));
         bannerRepository.save(new Banner(bePoz, "bePoz-image.png"));
         bannerRepository.save(new Banner(hwano, "hwano-image.png"));
@@ -72,7 +72,7 @@ public class DataLoader implements CommandLineRunner {
 
         Donation donation8 = new Donation(10_000L);
         donation8.addMessage("브라운", "조기수료 시켜드릴게요~!", true);
-        donation8.to(soori);
+        donation8.to(suri);
 
         donationRepository.save(donation1);
         donationRepository.save(donation2);
