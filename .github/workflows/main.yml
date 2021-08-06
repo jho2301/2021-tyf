@@ -50,7 +50,7 @@ jobs:
           # List of target platforms for build
           platforms: linux/amd64 # optional
           # Push is a shorthand for --output=type=registry
-          push: false # optional, default is false
+          push: true # optional, default is false
           
           # List of tags
           tags: ${{ steps.docker_meta.outputs.tags }}
